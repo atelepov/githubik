@@ -1,0 +1,27 @@
+{
+    "name": "GitHub'ik",
+    "version": "0.0.1",
+    "description": "GitHub an extension!",
+    "manifest_version": 2,
+    "browser_action": {
+        //"default_icon": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "*://*.github.com/*"
+          ],
+          "js": [
+            "content.js"
+          ]
+        }
+      ],    
+    "permissions": [
+        "*://*.github.com/*",
+        "activeTab"
+      ],
+      "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    }
+}
